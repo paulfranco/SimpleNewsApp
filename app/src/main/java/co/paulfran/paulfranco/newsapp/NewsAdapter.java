@@ -48,7 +48,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         String sectionName = currentNews.getSectionName();
         // Get the news title of the current News object
         String newsTitle = currentNews.getTitle();
-        // Get the date of the current News object
+        // Get the date and time of the current News object
         String newsDate = currentNews.getPublicationDate();
         String newsTime = currentNews.getPublicationDate();
 
