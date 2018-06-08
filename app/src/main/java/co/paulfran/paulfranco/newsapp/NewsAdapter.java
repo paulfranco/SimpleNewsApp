@@ -82,7 +82,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
     public String convertDateFormat(String input) {
         input = input.substring(0, input.length() - 1);
         String oldFormat = "yyyy-MM-dd'T'HH:mm:ss";
-        String newFormat = "dd/MM/yyyy";
+        String newFormat = "MM/dd/yyyy";
         SimpleDateFormat inputFormat = new SimpleDateFormat(oldFormat);
         SimpleDateFormat outputFormat = new SimpleDateFormat(newFormat);
         Date date = null;
@@ -112,8 +112,5 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }
         return output;
     }
-
-
-
 
 }
