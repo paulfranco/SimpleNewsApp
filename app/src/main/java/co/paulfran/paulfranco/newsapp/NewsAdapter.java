@@ -68,6 +68,11 @@ public class NewsAdapter extends ArrayAdapter<News> {
         // Display news date in that TextView
         newsPublicationDateTimeTextView.setText(convertDateFormat(newsDate));
 
+        // Find the TextView with the id news_publication_time
+        TextView newsPublicationTimeTextView = (TextView) listItemView.findViewById(R.id.news_publication_time);
+        // Display news time in that TextView
+        newsPublicationTimeTextView.setText(convertTimeFormat(newsTime));
+
 
         // Return the list item view that is now showing the appropriate data
         return listItemView;

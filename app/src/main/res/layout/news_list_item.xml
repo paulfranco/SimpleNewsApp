@@ -26,6 +26,7 @@
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
             android:textAllCaps="true"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="12sp"
             tools:text="news section placeholder" />
 
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
 
+            android:textColor="@android:color/black"
             android:textSize="12sp"
             tools:text="Mar 6, 2010" />
 
