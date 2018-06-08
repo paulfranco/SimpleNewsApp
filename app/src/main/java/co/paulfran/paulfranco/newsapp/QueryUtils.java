@@ -137,10 +137,9 @@ public class QueryUtils {
             // Create a JSONObject from the JSON response string
             JSONObject baseJsonResponse = new JSONObject(newsJSON);
 
-            // Extract the JSONArray associated with the key called "features",
-            // which represents a list of features (or earthquakes).
+            // Extract the JSONObject associated with the key called "response",
             JSONObject responseJSONObject = baseJsonResponse.getJSONObject(KEY_RESPONSE);
-
+            // Extract the JSONArray associated with the key called "results"
             JSONArray newsArray = responseJSONObject.getJSONArray(KEY_RESULTS);
 
             // Variables for JSON parsing
@@ -149,10 +148,10 @@ public class QueryUtils {
             String title;
             String webUrl;
 
-            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
+            // For each earthquake in the JSONArray, create an {@link News} object
             for (int i = 0; i < newsArray.length(); i++) {
 
-                // Get a single earthquake at position i within the list of earthquakes
+                // Get a single news at position i within the list of news
                 JSONObject currentNewsArticle = newsArray.getJSONObject(i);
 
                 // Check if a sectionName exists
