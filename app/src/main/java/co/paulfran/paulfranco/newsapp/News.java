@@ -15,7 +15,7 @@ public class News {
     private String mPublicationDate;
 
     // Constructor for the news article
-    public News(String title, String sectionName, String webURL, String publicationDate) {
+    News(String title, String sectionName, String webURL, String publicationDate) {
         mTitle = title;
         mSectionName = sectionName;
         mWebURL = webURL;

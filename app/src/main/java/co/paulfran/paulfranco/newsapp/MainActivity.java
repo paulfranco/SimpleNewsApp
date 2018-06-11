@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     /** Adapter for the list of news */
     private NewsAdapter mAdapter;
 
-    /** URL for earthquake data from the USGS dataset */
+    /** URL for news data from the Guardian API */
     private static final String USGS_REQUEST_URL =
             "https://content.guardianapis.com/search?q=world%20cup%20russia&api-key=test";
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             loadingIndicator.setVisibility(View.GONE);
 
             // Update empty state with no connection error message
-            mEmptyStateTextView.setText("No Internet Connection");
+            mEmptyStateTextView.setText(R.string.no_internet);
         }
     }
     @Override
@@ -121,12 +121,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         loadingIndicator.setVisibility(View.GONE);
 
         // Set empty state text to display "No news found."
-        mEmptyStateTextView.setText("No News Found");
+        mEmptyStateTextView.setText(R.string.no_news);
 
         // Clear the adapter of previous news data
         mAdapter.clear();
 
-        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+        // If there is a valid list of {@link News}, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (news != null && !news.isEmpty()) {
             mAdapter.addAll(news);
